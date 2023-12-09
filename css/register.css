@@ -1,0 +1,109 @@
+.input-box {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.register-form {
+    width: 500px;
+    height: 530px;
+    padding: 30px;
+    padding-top: 40px;
+    border-radius: 10px;
+    margin-top: 50px;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-left: 20px;
+    text-align: left;
+    position: relative;
+    align-items: end;
+}
+.required-field {
+    color: red;
+    margin-left: 5px;
+}
+.form-row {
+    margin-bottom: 20px;
+}
+.home-link {
+    position: fixed;
+    top: 30px;
+    right: 80px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease; /* Added transition effect */
+}
+
+.home-link a:hover {
+    color: blue; /* Change color on hover */
+}
+
+.home-link a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 5px;
+}
+.form-group {
+    display: inline-block;
+    width: 48%; /* Adjust the width of the columns as needed */
+    margin-bottom: 15px;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-left:50px;
+  }
+  
+  .signup-image {
+    width: 500px; /* Adjust the width as needed */
+    height: 300px; /* Maintain aspect ratio */
+    margin-right: 10px; /* Adjust the spacing between the image and the form */
+    
+  }
+  
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-box:focus {
+    border-color: #4CAF50;
+}
+#result {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Additional styling for success message (optional) */
+#result.success {
+    color: green;
+}
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}

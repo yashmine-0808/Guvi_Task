@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/profile.js"></script>
+    <link rel="stylesheet" href="./css/profile.css" />
+    <title>Profile</title>
+</head>
+<body>
+    <div class="sidebar">
+            
+        <ul class="menu">
+            <br><br>
+            <li><a href="profile.html">User Profile</a></li>
+        </ul>
+        <button type="button" id="btnLogout" class="btn-logout" onclick="logout()">Logout</button>
+    </div>
+    
+    <form action="./php/profile.php" method="post">
+    <div class="form-section">
+        <h2>Welcome User!!</span>!</h2>
+      <div class="form-field-grid">
+          <div class="form-field">
+              <label for="name">Name: <span class="required-field">*</span></label>
+              <input type="text" id="name" name="name" required>
+              <span class="required-validator" style="color: red; display: none;">Enter Name</span>
+          </div>
+          <div class="form-field">
+              <label for="TextBox6">Mobile Number: <span class="required-field">*</span></label>
+              <input type="text" id="TextBox6" name="phone" required>
+              <span class="required-validator" style="color: red; display: none;">Enter Mobile Number</span>
+          </div>
+          <div class="form-field">
+              <label for="TextBox1">Email ID: <span class="required-field">*</span></label>
+              <input type="text" id="TextBox1" name="dob"required>
+              <span class="required-validator" style="color: red; display: none;">Enter Email ID</span>
+          </div>
+          <div class="form-field">
+              <label for="txtDOB">Date of Birth: <span class="required-field">*</span></label>
+              <input type="date" id="txtDOB" onchange="calculateAge(this.value)" name="dob" required>
+              <span class="required-validator" style="color: red; display: none;">Select Date of Birth</span>
+            </div>
+            <div class="form-field">
+                <label for="txtAge">Age:</label>
+                <input type="text" id="txtAge" readonly>
+            </div>
+            <div class="form-field">
+                <label for="ddlGender">Gender: <span class="required-field">*</span></label>
+                <select id="ddlGender" required>
+                    <option value="">Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <span class="required-validator" style="color: red; display: none;">Select Gender</span>
+            </div>
+            <div class="form-field">
+                <label for="TextBox4">Occupation: </label>
+                <input type="text" id="TextBox4">
+               
+            </div>
+            <div class="form-field">
+                <label for="ddlBloodgroup">Blood Group:<span class="required-field">*</span></label>
+                <select id="ddlBloodgroup" required>
+                    <option value="">Select</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+                <span class="required-validator" style="color: red; display: none;">Select Blood Group</span>
+            </div>
+            <div class="form-field">
+                <label for="txtCity">City: <span class="required-field">*</span></label>
+                <input type="text" id="txtCity" required>
+                <span class="required-validator" style="color: red; display: none;">Enter City</span>
+            </div>
+        </div>
+        <button type="button" id="btnSaveDetails" class="fetch-button" onclick="validateAndSave()">Save Details</button>
+      </form>
+    </div>
+      
+  </body>
+  
+  </html>

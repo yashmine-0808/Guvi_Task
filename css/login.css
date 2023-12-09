@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.text-center{
+    text-align: center;
+    margin-bottom: 50px;
+    color: rgb(92, 154, 0);
+}
+.container{
+    text-align: center;
+    border-radius: 5px;
+    border-color: rgb(211, 19, 249);
+}
+.form-group{
+    margin-bottom: 15px;
+}
+.inputbox{
+    width: 200px;
+    height: 30px;
+}
+.btn{
+    width: 80px;
+    height: 30px;
+    color: white;
+    background-color: rgb(164, 11, 224);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
